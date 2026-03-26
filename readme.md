@@ -16,29 +16,40 @@ O sistema foi projetado de forma modular, dividido em três pilares principais:
 
        * Cadastro Dual: Registro de clientes como Pessoa Física (PF) ou Pessoa Jurídica (PJ).
 
-       * Validação de Documentos: Possui algoritmos integrados para validar matematicamente a autenticidade de números de CPF e CNPJ antes de salvar.
+       * Validação de Documentos: Possui algoritmos integrados para validar matematicamente a autenticidade de
+         números de CPF e CNPJ antes de salvar.
 
-       * CRUD Completo: Funções para Cadastrar, Consultar (por código), Listar (todos) e Remover clientes do arquivo clientes.csv.
+       * CRUD Completo: Funções para Cadastrar, Consultar (por código), Listar (todos) e Remover clientes do arquivo
+         clientes.csv.
 
-    2. Módulo de Produtos (Planejado) A estrutura de dados para produtos já está definida (struct Produtos), prevendo o controle de estoque, descrição e preço. O próximo passo é implementar as funções CRUD para produtos.csv.
+    2. Módulo de Produtos (Planejado) A estrutura de dados para produtos já está definida (struct Produtos), prevendo
+       o controle de estoque, descrição e preço. O próximo passo é implementar as funções CRUD para produtos.csv.
 
-    3. Módulo de Pedidos (Implementado) Este módulo é o coração do sistema, gerenciando a relação de vendas entre clientes e produtos, ele utiliza uma lógica robusta de arquivo para garantir a integridade dos dados:
+    3. Módulo de Pedidos (Implementado) Este módulo é o coração do sistema, gerenciando a relação de vendas entre
+       clientes e produtos, ele utiliza uma lógica robusta de arquivo para garantir a integridade dos dados:
 
-      * Validação de Existência: Garante que o Cliente e o Produto referenciados no pedido existam nos seus respectivos módulos antes do registro.
+      * Validação de Existência: Garante que o Cliente e o Produto referenciados no pedido existam nos seus
+        respectivos módulos antes do registro.
 
-      * Geração de Data: Atribui automaticamente a data atual ao pedido no momento do cadastro e após realizar alguma atualização do pedido.
+      * Geração de Data: Atribui automaticamente a data atual ao pedido no momento do cadastro e após realizar
+        alguma atualização do pedido.
 
-      * Calculo de Valor Total: Faz o cálculo automáticamente com base no valor unitário do Produto e a quantidade de itens, valor unitário pré-estabelecido no cadastro do Produto.
+      * Calculo de Valor Total: Faz o cálculo automáticamente com base no valor unitário do Produto e a quantidade 
+        de itens, valor unitário pré-estabelecido no cadastro do Produto.
 
-      * Busca de Dados: Obtém dados do Produto de forma automática após informar o código identificador do Produto para que seja feito o cadastro do Pedido.
+      * Busca de Dados: Obtém dados do Produto de forma automática após informar o código identificador do
+        Produto para que seja feito o cadastro do Pedido.
 
       * Manutenção de Arquivo Seguro:
 
-        Atualização (Update): Utiliza a lógica de arquivo temporário (ler, modificar, reescrever no temporário e renomear) para garantir uma atualização segura e atômica.
+        Atualização (Update): Utiliza a lógica de arquivo temporário (ler, modificar, reescrever no temporário e
+        renomear) para garantir uma atualização segura e atômica.
 
-        Remoção (Delete): Deleta pedidos de forma segura usando o mesmo método de arquivo temporário e renomeação.
+        Remoção (Delete): Deleta pedidos de forma segura usando o mesmo método de arquivo temporário e
+        renomeação.
 
-      * Status de Pedido: Atribuí Status de pedido automáticamente no momento do cadastro, podendo ser alterado posteriormente.
+      * Status de Pedido: Atribuí Status de pedido automáticamente no momento do cadastro, podendo ser alterado
+        posteriormente.
 
 
 ## 📋 Pré-requisitos
@@ -47,7 +58,8 @@ Para compilar e executar este projeto, você precisará ter:
 
     Um compilador C (como o gcc)
 
-    A biblioteca ncurses instalada (geralmente libncurses-dev ou ncurses-devel dependendo da sua distribuição Linux)
+    A biblioteca ncurses instalada (geralmente libncurses-dev ou ncurses-devel dependendo da sua distribuição
+    Linux)
 
 ## 🔧 Compilação
 
@@ -57,7 +69,8 @@ gcc principal.c cliente/cliente.c produto/Produtos.c pedido/pedido.c -o principa
 
 ## ▶️ Execução
 
-Após a compilação bem-sucedida, um arquivo executável chamado principal será criado. Para executar o programa, utilize: Bash
+Após a compilação bem-sucedida, um arquivo executável chamado principal será criado. Para executar o programa,
+utilize:  Bash
 
 ./principal
 
