@@ -12,7 +12,8 @@ A persistência dos dados (salvamento) é gerenciada através de arquivos de tex
 
 O sistema foi projetado de forma modular, dividido em três pilares principais:
 
-    1. Módulo de Clientes (Implementado) O módulo de clientes é a base do sistema e está totalmente funcional. Ele permite:
+    1. Módulo de Clientes (Implementado) O módulo de clientes é a base do sistema e está totalmente funcional.Ele
+       permite:
 
        * Cadastro Dual: Registro de clientes como Pessoa Física (PF) ou Pessoa Jurídica (PJ).
 
