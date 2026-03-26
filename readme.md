@@ -78,5 +78,7 @@ utilize:  Bash
 ## 👥 Autores
 
 Enzo Oliveira Finotti (Sistemas de Informação - Universidade Estadual de Goiás)
+
 Daniel Sobrinho Mendes (Sistemas de Informação - Universidade Estadual de Goiás)
+
 Gabriel Prado Menezes (Sistemas de Informação - Universidade Estadual de Goiás)
